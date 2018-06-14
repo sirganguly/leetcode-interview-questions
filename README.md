@@ -17,6 +17,7 @@
 * Fork repo
 * There are 2 methods you need to call in `lcode.py`:
 	* `getQuestionOfType(qType)`
+		* Prints the Question number on leetcode and the Problem name
 	* `getRandomQuestionOfType(qType)`
 * Replace `qType` with either `"Easy"`, `"Medium"` or `"Hard"`
 
