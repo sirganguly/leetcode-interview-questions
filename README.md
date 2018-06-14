@@ -15,7 +15,13 @@
 ### How to use?
 
 * Fork repo
-* There are 2 methods you need to call:
+* There are 2 methods you need to call in `lcode.py`:
 	* `getQuestionOfType(qType)`
 	* `getRandomQuestionOfType(qType)`
 * Replace `qType` with either `"Easy"`, `"Medium"` or `"Hard"`
+
+### Future development
+
+* Push questions to database instead of pre-processing in memory
+* Build web app wrapper around this database
+* Use firebase for keks

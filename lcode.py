@@ -5,8 +5,7 @@ import random
 data = get_problems()
 data = data.split("\n")
 
-problems = {}
-descriptions = {}
+problems, descriptions = {}, {}
 easy, medium, hard = [], [], []
 
 def pre_process_questions():
@@ -24,7 +23,7 @@ def pre_process_questions():
 		else:
 			problems[problem_num] = 1
 	  	
-	  	
+	  	#build the data structures for problem descriptions
 	  	if problem_num not in descriptions:
 			descriptions[problem_num] = (problem_name, difficulty)
 
@@ -35,6 +34,7 @@ def pre_process_questions():
 			else:
 				hard.append(problem_num)
 
+#helper method
 def getIterableOfType(qType):
 	iter_able = None
 	if qType == "Easy":
@@ -45,12 +45,20 @@ def getIterableOfType(qType):
 		iter_able = hard
 	return iter_able
 
+'''
+	Returns all questions of qType
+	qType: Easy,Medium,Hard
+'''
 def getQuestionOfType(qType):
 	iter_able = getIterableOfType(qType)
 	for num in iter_able:
 		print num, descriptions[num][0]
 	print "\nThere are a total of {} {} problems".format(len(iter_able), qType)
 
+'''
+	Returns a random question of qType
+	qType: Easy,Medium,Hard
+'''
 def getRandomQuestionOfType(qType):
 	iter_able = getIterableOfType(qType)
 	randnum = random.randint(0, len(iter_able)-1)
