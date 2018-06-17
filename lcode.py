@@ -49,7 +49,7 @@ def getIterableOfType(qType):
 	Returns all questions of qType
 	qType: Easy,Medium,Hard
 '''
-def getQuestionOfType(qType):
+def getAllQuestionsOfType(qType):
 	iter_able = getIterableOfType(qType)
 	for num in iter_able:
 		print num, descriptions[num][0]
@@ -65,9 +65,9 @@ def getRandomQuestionOfType(qType):
 	print iter_able[randnum], descriptions[iter_able[randnum]]
 
 
+pre_process_questions()
 
 if __name__ == "__main__":
-	pre_process_questions()
 	getRandomQuestionOfType("Easy")
 
 

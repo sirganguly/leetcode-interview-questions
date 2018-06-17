@@ -15,9 +15,9 @@
 ### How to use?
 
 * Fork repo
-* There are 2 methods you need to call in `lcode.py`:
-	* `getQuestionOfType(qType)`
-		* Prints the Question number on leetcode and the Problem name
+* There are 2 methods you need to call in `interface.py`:
+	* `getAllQuestionsOfType(qType)`
+		* Prints list of all questions of `qType` with the question number on leetcode and the problem name
 	* `getRandomQuestionOfType(qType)`
 * Replace `qType` with either `"Easy"`, `"Medium"` or `"Hard"`
 
